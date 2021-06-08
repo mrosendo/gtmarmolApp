@@ -8,16 +8,44 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:contentDescription="@string/app_name"
         android:id="@+id/imageView"
         android:layout_width="168dp"
         android:layout_height="178dp"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184"
+        app:layout_constraintVertical_bias="0.182"
         app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/nitInput"
+        android:layout_width="248dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="NIT"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="202dp"
+        android:layout_height="70dp"
+        android:drawableLeft="@drawable/ic_login"
+        android:text="Ingresar"
+        app:backgroundTint="#F8744A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
