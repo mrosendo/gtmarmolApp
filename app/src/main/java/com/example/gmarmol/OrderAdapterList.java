@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
-public class OrderAdapterList extends RecyclerView.Adapter<OrderAdapterList.ViewHolder> {
+public class OrderAdapterList extends RecyclerView.Adapter<OrderAdapterList.ViewHolder>{
+
     private List<Order> mData;
     private LayoutInflater mInflater;
     private Context context;
@@ -24,13 +24,11 @@ public class OrderAdapterList extends RecyclerView.Adapter<OrderAdapterList.View
     }
 
     @Override
-    public int getItemCount() {
-        return mData.size();
-    }
+    public int getItemCount() { return mData.size(); }
 
     @Override
     public OrderAdapterList.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.order_item, null);
+        View view = mInflater.inflate(R.layout.cardview_item, null);
         return new OrderAdapterList.ViewHolder(view);
     }
 
@@ -52,13 +50,12 @@ public class OrderAdapterList extends RecyclerView.Adapter<OrderAdapterList.View
 
         ViewHolder(View itemView) {
             super(itemView);
-            docNum = itemView.findViewById(R.id.order_number);
-            docDate = itemView.findViewById(R.id.date_order);
+            docNum = itemView.findViewById(R.id.doc_num);
+            docDate = itemView.findViewById(R.id.doc_date);
             itemView.setOnClickListener(this);
         }
 
         void bindData(final Order item) {
-
             docNum.setText(Integer.toString(item.getDocNum()));
             docDate.setText(item.getDocDate());
         }

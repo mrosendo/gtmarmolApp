@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gmarmol"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Welcome"></activity>
+        <activity android:name=".OrderList"></activity>
+        <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
